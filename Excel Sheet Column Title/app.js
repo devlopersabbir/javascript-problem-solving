@@ -1,17 +1,11 @@
-console.log("hello");
-
 function convertToTitle(columnNumber) {
-  switch (columnNumber) {
-    case 1:
-      return "A";
-    case 2:
-      return "B";
-    case 3:
-      return "C";
-
-    default:
-      return "NONE";
+  let ans = "";
+  while (columnNumber > 0) {
+    columnNumber--;
+    ans += String.fromCharCode((columnNumber % 26) + "A".charCodeAt(0));
+    columnNumber = Math.floor(columnNumber / 26);
   }
+  return ans.split("").reverse().join("");
 }
 
-console.log(convertToTitle(2));
+console.log(convertToTitle(28));
