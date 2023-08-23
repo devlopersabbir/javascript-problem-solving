@@ -39,7 +39,7 @@ columnNumber = Math.floor(columnNumber / 26);
 
 > Solving code
 
-```
+```js
 function convertToTitle(columnNumber) {
   let ans = "";
   while (columnNumber > 0) {
